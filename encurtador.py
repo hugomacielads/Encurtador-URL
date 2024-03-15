@@ -1,9 +1,7 @@
 import pyshorteners
 
-url = "https://blog-hugomaciel.netlify.app/"
-
-link = pyshorteners.Shortener()
-
-url_encurtada = link.tinyurl.short(url)
-
-print(f'\n{url_encurtada}')
+def generate_short_url_2(Long_url):
+    link = pyshorteners.Shortener()
+    short_url = link.tinyurl.short(Long_url)
+    print(f'\n{short_url}')
+    return short_url
