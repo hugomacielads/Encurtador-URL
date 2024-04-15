@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request, redirect
+from flask_sqlalchemy import SQLAlchemy
 import encurtador
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://seu_usuario:senha@localhost:5432/flask_db'
 
 @app.route('/')
 def index():
